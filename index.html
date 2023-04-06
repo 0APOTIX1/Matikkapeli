@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+    <scripts>
+      <script src="SourceJS/Helper.js"></script>
+      <script src="SourceJS/main.js"></script>      
+    </scripts>
+    <title>Matikkapeli</title>
+  </head>
+  <body>
+    <div id="div_Question" class="div_Question">
+      <text id="text_Question" class="text_Question">Question</text>
+    </div>
+    <div>
+      <input type="number" id="input_Answer" class="input_Answer">
+    </div>
+    <div id="div_Difficulty" class="div_Difficulty">
+      <text id="div_Difficulty-text_Dif" class="div_Difficulty-text_Dif">Difficulty</text>
+      <select id="div_Difficulty-select_Difficulties">
+        <option value="0">Custom</option>
+        <option value="1">Easy</option>
+        <option value="2">Medium</option>
+        <option value="3">Hard</option>
+        <option value="4">Impossible</option>
+      </select>
+    </div>
+    <div id="div_Settings" class="div_Settings">
+      <text style="background-color:#32d33a;" class="Setting0 Setting" id="Setting0" onclick="Update_Setting('Allow_Add', this, {Toggle: true})">Yhteenlaskut</text>
+      <text style="background-color:#32d33a;" class="Setting1 Setting" id="Setting1" onclick="Update_Setting('Allow_Sub', this, {Toggle: true})">Vähennyslaskut</text>
+      <text style="background-color:#32d33a;" class="Setting2 Setting" id="Setting2" onclick="Update_Setting('Allow_Mul', this, {Toggle: true})">Kertolaskut</text>
+      <text style="background-color:#e44421;" class="Setting3 Setting" id="Setting3" onclick="Update_Setting('Allow_Div', this, {Toggle: true})">Jakolaskut</text>
+      <text style="background-color:#e44421;" class="Setting4 Setting" id="Setting4" onclick="Update_Setting('Allow_Dec', this, {Toggle: true})">Desimaaliluvut</text>
+      <text class="Setting5_Text">Lukujen suuruus</text>
+      <input type="number" id="Setting5" class="Setting5 Setting" value="10">
+    </div>
+    <text id="Score" class="Score">Score: 0</text>
+  </body>
+  <script src="SourceJS/control.js"></script>
+</html>
